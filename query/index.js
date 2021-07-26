@@ -13,7 +13,7 @@ app.get('/posts', (req, res) => {
     res.send(posts);
 });
 
-const handleEvents = ({type, data}) => {
+const handleEvents = (type, data) => {
     if(type === 'PostCreated'){
         const {id, title} = data;
         posts[id] = {id,title,comments:[]};
